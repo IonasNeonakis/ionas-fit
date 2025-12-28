@@ -18,8 +18,6 @@ function Home() {
                 Hello World
             </div>
             <div style={{background: "white", padding: "16px"}}>
-
-
                 <QRCode value={qrCodeData}/>
             </div>
         </>

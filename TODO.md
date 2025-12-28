@@ -1,5 +1,5 @@
 - [ ] Add style
-- [ ] Update README
+- [x] Update README
 - [ ] Buy domain
 - [ ] Refresh main QR Code 
 - [ ] Display friends
