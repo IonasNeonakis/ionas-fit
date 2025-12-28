@@ -1,0 +1,7 @@
+- [ ] Add style
+- [ ] Update README
+- [ ] Buy domain
+- [ ] Refresh main QR Code 
+- [ ] Display friends
+- [ ] Publish
+- [x] Tanstack start
