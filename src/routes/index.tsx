@@ -1,5 +1,5 @@
 import {createFileRoute} from "@tanstack/react-router";
-// @ts-ignore
+// @ts-expect-error type isn't correct in react-qr-code
 import {QRCode} from "react-qr-code";
 import {useQuery} from "@tanstack/react-query";
 import {qrCodeOptions} from "../utils/qrcode.ts";

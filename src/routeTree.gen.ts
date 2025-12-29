@@ -10,43 +10,33 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ApiQrcodeGeneratorRouteImport } from './routes/api/qrcodeGenerator'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiQrcodeGeneratorRoute = ApiQrcodeGeneratorRouteImport.update({
-  id: '/api/qrcodeGenerator',
-  path: '/api/qrcodeGenerator',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/api/qrcodeGenerator': typeof ApiQrcodeGeneratorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/api/qrcodeGenerator': typeof ApiQrcodeGeneratorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/api/qrcodeGenerator': typeof ApiQrcodeGeneratorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/api/qrcodeGenerator'
+  fullPaths: '/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/api/qrcodeGenerator'
-  id: '__root__' | '/' | '/api/qrcodeGenerator'
+  to: '/'
+  id: '__root__' | '/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ApiQrcodeGeneratorRoute: typeof ApiQrcodeGeneratorRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,19 +48,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/qrcodeGenerator': {
-      id: '/api/qrcodeGenerator'
-      path: '/api/qrcodeGenerator'
-      fullPath: '/api/qrcodeGenerator'
-      preLoaderRoute: typeof ApiQrcodeGeneratorRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ApiQrcodeGeneratorRoute: ApiQrcodeGeneratorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
