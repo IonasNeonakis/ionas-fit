@@ -10,6 +10,7 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar.tsx";
 import {ScrollArea} from "@/components/ui/scroll-area.tsx";
 import {Progress} from "@/components/ui/progress.tsx";
 import {useState, useEffect} from "react";
+import {Loader2} from "lucide-react";
 import {
     Dialog,
     DialogContent,
@@ -87,16 +88,16 @@ function MyQRCodeSection() {
                 <div className="bg-white p-4 rounded-xl shadow-inner border border-slate-100">
                     {isLoading ? (
                         <div className="w-[256px] h-64 flex items-center justify-center">
-                            <p className="animate-pulse text-muted-foreground">Generating QR…</p>
+                            <Loader2 className="h-10 w-10 animate-spin text-muted-foreground" />
                         </div>
                     ) : (
                         <QRCode value={qrCodeData} size={256} style={{ height: "auto", maxWidth: "100%", width: "100%" }} />
                     )}
                 </div>
                 <div className="mt-6 w-full max-w-[256px] space-y-2">
-                    <Progress value={progress} className="h-1" />
+                    <Progress value={isLoading ? undefined : progress} className="h-1" />
                     <p className="text-[10px] text-center text-muted-foreground uppercase tracking-wider font-medium">
-                        Refreshing QR Code
+                        {isLoading ? "Fetching QR Code" : "Refreshing QR Code"}
                     </p>
                 </div>
             </CardContent>
@@ -167,8 +168,8 @@ function FriendQRDialog({ friend, onClose }: { friend: Friend | null, onClose: (
                 <div className="flex flex-col items-center justify-center py-6">
                     <div className="bg-white p-4 rounded-xl shadow-inner border border-slate-100">
                         {isLoading ? (
-                            <div className="w-50 h-50 flex items-center justify-center">
-                                <p className="animate-pulse text-muted-foreground">Loading QR…</p>
+                            <div className="w-[200px] h-[200px] flex items-center justify-center">
+                                <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />
                             </div>
                         ) : (
                             <QRCode value={qrCodeData || ""} size={200} style={{ height: "auto", maxWidth: "100%", width: "100%" }} />

@@ -8,20 +8,20 @@ export interface Friend {
 export const FRIENDS: Friend[] = [
     {
         id: "1",
-        name: "Alice Johnson",
-        cardNumber: "12345678",
-        avatarUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alice"
+        name: "Marie",
+        cardNumber: "F172605612",
+        avatarUrl: "https://api.dicebear.com/9.x/open-peeps/svg?seed=Maria"
     },
     {
         id: "2",
-        name: "Bob Smith",
-        cardNumber: "87654321",
-        avatarUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=Bob"
+        name: "Olivier",
+        cardNumber: "F177061960",
+        avatarUrl: "https://api.dicebear.com/9.x/open-peeps/svg?seed=Aiden"
     },
     {
         id: "3",
-        name: "Charlie Brown",
-        cardNumber: "11223344",
-        avatarUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=Charlie"
+        name: "Pej",
+        cardNumber: "F172989414",
+        avatarUrl: "https://api.dicebear.com/9.x/open-peeps/svg?seed=Jameson"
     }
-];
+] as const;
