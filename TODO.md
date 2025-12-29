@@ -3,6 +3,6 @@
 - [x] Buy domain
 - [x] Refresh main QR Code 
 - [x] Display friends
-- [ ] Publish
+- [x] Publish
 - [x] Tanstack start
-- [ ] CI/CD
+- [x] CI/CD 
