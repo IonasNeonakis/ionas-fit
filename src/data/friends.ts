@@ -7,16 +7,16 @@ export interface Friend {
 
 export const FRIENDS: Friend[] = [
     {
-        id: "1",
-        name: "Marie",
-        cardNumber: "F172605612",
-        avatarUrl: "https://api.dicebear.com/9.x/open-peeps/svg?seed=Maria"
-    },
-    {
         id: "2",
         name: "Olivier",
         cardNumber: "F177061960",
         avatarUrl: "https://api.dicebear.com/9.x/open-peeps/svg?seed=Aiden"
+    },
+    {
+        id: "1",
+        name: "Marie",
+        cardNumber: "F172605612",
+        avatarUrl: "https://api.dicebear.com/9.x/open-peeps/svg?seed=Maria"
     },
     {
         id: "3",

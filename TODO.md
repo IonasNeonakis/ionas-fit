@@ -2,6 +2,6 @@
 - [x] Update README
 - [ ] Buy domain
 - [x] Refresh main QR Code 
-- [ ] Display friends
+- [x] Display friends
 - [ ] Publish
 - [x] Tanstack start
