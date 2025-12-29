@@ -1,4 +1,4 @@
-- [ ] Add style
+- [x] Add style
 - [x] Update README
 - [ ] Buy domain
 - [x] Refresh main QR Code 

@@ -1,7 +1,7 @@
 import {queryOptions} from "@tanstack/react-query";
 import {createServerFn, createServerOnlyFn} from "@tanstack/react-start";
 import * as crypto from "node:crypto";
-import {serverEnv} from "../config/env.ts";
+import {serverEnv} from "@/config/env.ts";
 
 const GUID = "TVR"
 const PREFIX = "GM2";
