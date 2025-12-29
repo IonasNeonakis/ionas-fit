@@ -33,9 +33,15 @@ export default defineConfig({
       manifest: {
         name: 'IonasFit',
         short_name: 'IonasFit',
-        description: 'IonasFit - Workout Tracking',
+        description: 'IonasFit - Gym Entry',
         theme_color: '#ffffff',
         icons: [
+          {
+            src: 'web-app-manifest-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'any'
+          },
           {
             src: 'web-app-manifest-192x192.png',
             sizes: '192x192',
@@ -46,7 +52,28 @@ export default defineConfig({
             src: 'web-app-manifest-512x512.png',
             sizes: '512x512',
             type: 'image/png',
+            purpose: 'any'
+          },
+          {
+            src: 'web-app-manifest-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
             purpose: 'maskable'
+          }
+        ],
+        screenshots: [
+          {
+            src: 'screenshot-mobile.png',
+            sizes: '1080x1920',
+            type: 'image/png',
+            label: 'IonasFit Mobile'
+          },
+          {
+            src: 'screenshot-desktop.png',
+            sizes: '1920x1080',
+            type: 'image/png',
+            form_factor: 'wide',
+            label: 'IonasFit Desktop'
           }
         ]
       },
